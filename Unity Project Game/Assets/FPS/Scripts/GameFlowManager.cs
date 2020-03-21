@@ -25,6 +25,10 @@ public class GameFlowManager : MonoBehaviour
     [Tooltip("This string has to be the name of the scene you want to load when losing")]
     public string loseSceneName = "LoseScene";
 
+    [Header("Developer")]
+    [Tooltip("Light used for building the gameworld in editor")]
+    public GameObject devLight;
+
 
     public bool gameIsEnding { get; private set; }
 
@@ -43,12 +47,24 @@ public class GameFlowManager : MonoBehaviour
 		DebugUtility.HandleErrorIfNullFindObject<ObjectiveManager, GameFlowManager>(m_ObjectiveManager, this);
 
         AudioUtility.SetMasterVolume(1);
+
+        //render and lighting settings to change for gameplay
+        RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Skybox;
+        RenderSettings.fog = true;
+        devLight.SetActive(false);
+
     }
 
     void Update()
     {
         if (gameIsEnding)
         {
+            //render and lighting settings to change for editing
+            RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
+            RenderSettings.fog = false;
+            devLight.SetActive(true);
+
+
             float timeRatio = 1 - (m_TimeLoadEndGameScene - Time.time) / endSceneLoadDelay;
             endGameFadeCanvasGroup.alpha = timeRatio;
 
