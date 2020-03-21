@@ -82,7 +82,7 @@ public class OverheatBehavior : MonoBehaviour
                 data.renderer.SetPropertyBlock(overheatMaterialPropertyBlock, data.materialIndex);
             }
 
-            m_SteamVFXEmissionModule.rateOverTimeMultiplier = steamVFXEmissionRateMax * (1f - currentAmmoRatio);
+            m_SteamVFXEmissionModule.rateOverTimeMultiplier = steamVFXEmissionRateMax * ( currentAmmoRatio);
         }
 
         // cooling sound
@@ -102,7 +102,7 @@ public class OverheatBehavior : MonoBehaviour
                 return;
             }
 
-            m_AudioSource.volume = ammoToVolumeRatioCurve.Evaluate(1 - currentAmmoRatio);
+            m_AudioSource.volume = ammoToVolumeRatioCurve.Evaluate(currentAmmoRatio);
         }
 
         m_LastAmmoRatio = currentAmmoRatio;
