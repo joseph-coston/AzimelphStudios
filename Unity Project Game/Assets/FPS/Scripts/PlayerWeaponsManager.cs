@@ -79,6 +79,12 @@ public class PlayerWeaponsManager : MonoBehaviour
     WeaponSwitchState m_WeaponSwitchState;
     int m_WeaponSwitchNewWeaponIndex;
 
+    //getters and setters
+    public List<WeaponController> getStartingWeapons()
+    {
+        return startingWeapons;
+    }
+
     private void Start()
     {
         activeWeaponIndex = -1;

@@ -17,6 +17,17 @@ public struct CrosshairData
     public int crosshairSize;
     [Tooltip("The color of the crosshair image")]
     public Color crosshairColor;
+
+    //getters and setters
+    public int getCrosshairSize()
+    {
+        return crosshairSize;
+    }
+
+    public void setCrosshairSize(int size)
+    {
+         crosshairSize = size;
+    }
 }
 
 [RequireComponent(typeof(AudioSource))]
@@ -109,6 +120,52 @@ public class WeaponController : MonoBehaviour
     AudioSource m_ShootAudioSource;
 
     const string k_AnimAttackParameter = "Attack";
+
+    //getters and setters
+    public CrosshairData getCrosshairDataDefault()
+    {
+        return crosshairDataDefault;
+    }
+
+    public float getDelayBetweenShots()
+    {
+        return delayBetweenShots;
+    }
+
+    public void setDelayBetweenShots(float delay)
+    {
+        delayBetweenShots = delay;
+    }
+
+    public float getBulletSpreadAngle()
+    {
+        return bulletSpreadAngle;
+    }
+
+    public void setBulletSpreadAngle(float theta)
+    {
+        bulletSpreadAngle = theta;
+    }
+
+    public float getMaxAmmo()
+    {
+        return maxAmmo;
+    }
+
+    public void setMaxAmmo(float max)
+    {
+        maxAmmo = max;
+    }
+
+    public float getAmmoReloadRate()
+    {
+        return ammoReloadRate;
+    }
+
+    public void setAmmoReloadRate(float rate)
+    {
+        ammoReloadRate = rate;
+    }
 
     void Awake()
     {
@@ -341,4 +398,6 @@ public class WeaponController : MonoBehaviour
 
         return spreadWorldDirection;
     }
+    
+    
 }

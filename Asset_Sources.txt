@@ -1,0 +1,8 @@
+Temporary Idol Head : 
+	https://free3d.com/3d-model/olmec-stone-head-v1--80133.html
+
+Floater.cs script :
+	http://www.donovankeith.com/2016/05/making-objects-float-up-down-in-unity/
+
+Fonts :
+ 	https://www.fontspace.com/pentagrams-callygraphy-font-f16318

@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: -0.05
-  areaOfEffectDistance: 1.5
+  areaOfEffectDistance: 2
   point: {fileID: 6116952568563344848}
   damageRatioOverDistance:
     serializedVersion: 2

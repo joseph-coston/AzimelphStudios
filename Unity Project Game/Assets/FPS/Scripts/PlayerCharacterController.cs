@@ -433,4 +433,12 @@ public class PlayerCharacterController : MonoBehaviour
         isCrouching = crouched;
         return true;
     }
+    
+    //increase speed by the specified factor
+    public void changeSpeed(float factor)
+    {
+        float groundAirRatio = maxSpeedInAir / maxSpeedOnGround;
+        maxSpeedOnGround *= factor;
+        maxSpeedInAir = maxSpeedOnGround * groundAirRatio;
+    }
 }

@@ -51,6 +51,10 @@ public class GameFlowManager : MonoBehaviour
         //render and lighting settings to change for gameplay
         RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Skybox;
         RenderSettings.fog = true;
+        RenderSettings.fogMode = FogMode.Linear;
+        RenderSettings.fogColor = new Color(0.145f, 0.145f, 0.145f, 1);
+        RenderSettings.fogStartDistance = 2f;
+        RenderSettings.fogEndDistance = 25f;
         devLight.SetActive(false);
 
     }
