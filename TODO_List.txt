@@ -1,0 +1,50 @@
+Game World : 
+	- Make a flattened glade at the center of the playable area for which to place the central alter within.
+	- Add stone texture and bump mapping to central alter.
+	- Populate terrain with trees and mushrooms to make forrested.
+	- Increase height & steepness of mountains at boundaries of playable area or otherwise implement some invisible barrier to prevent player from falling off edge of gameworld.
+	- Add beach sand texture and implement ocean at east edge of map.
+	- Fix texture mapping on ground.
+	- Populate terrain with enemies or otherwise implement a random enemy starting location script.
+	- Place idols around map.
+	- Place power up points around map or otherwise implement a script to place them at random.
+
+Model assets :
+	- 5 unique wand models for each spell type.
+	- Idol statue model(s).
+	- Enemy models for:
+		= Rude Oak
+		= Werewolf
+		= Ghost
+	- Add particle systems to other mushrooms with AoE.
+
+Sound :
+	- Add better ambient noise.
+	- Add spell casting sound effects.
+	- Basically almost all other sound effects need a major overhaul, too.
+
+Functionality :
+	- Implement remaining 4 spell types: 
+		= fire bolt
+		= glitter bolt
+		= razer bolt
+		= lightning bolt (fix it)
+	- Implement power-up boost scripts:
+		= spells per cast
+		= spell damage
+		= mana capacity
+		= mana recharge rate
+		= spell casting rate
+		= wand illumination range
+		= others...?
+	- Add power-up point option dialogue menu.
+	- Implement wand randomization at beginning of game.
+	- Custom/new "game over" screen and menu.
+	- Custom/new "main menu" screen and menu.
+	- Better font in GUI.
+
+Bugs :
+	- Particle systems are all default purple.
+	- Lightning bolt wand is janky.
+	- Reticle size does not change with increase in accuracy.
+	- Raise notification text at bottom of screen upon power-up

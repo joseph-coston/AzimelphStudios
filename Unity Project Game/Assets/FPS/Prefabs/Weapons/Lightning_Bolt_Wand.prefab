@@ -182,6 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steamVFX: {fileID: 1818117475793052272}
   steamVFXEmissionRateMax: 10
+  wandLight: {fileID: 7136167355188776251}
   overheatGradient:
     serializedVersion: 2
     key0: {r: 0, g: 2.6398654, b: 0, a: 1}
@@ -385,7 +386,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3568575211147514839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.221, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2225486910712267856}
@@ -398,12 +399,12 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3568575211147514839}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Intensity: 2
+  m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -879,7 +880,7 @@ PrefabInstance:
     - target: {fileID: 8455270613747015080, guid: 21c8bd050f24da54285f8a3987ee6253,
         type: 3}
       propertyPath: moveWithTransform
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21c8bd050f24da54285f8a3987ee6253, type: 3}

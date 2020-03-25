@@ -197,6 +197,7 @@ public class PlayerWeaponsManager : MonoBehaviour
     public void SwitchWeapon(bool ascendingOrder)
     {
         int newWeaponIndex = -1;
+
         int closestSlotDistance = m_WeaponSlots.Length;
         for (int i = 0; i < m_WeaponSlots.Length; i++)
         {
