@@ -85,6 +85,11 @@ public class PlayerWeaponsManager : MonoBehaviour
         return startingWeapons;
     }
 
+    public WeaponController[] getWeaponSlots()
+    {
+        return m_WeaponSlots;
+    }
+
     private void Start()
     {
         activeWeaponIndex = -1;

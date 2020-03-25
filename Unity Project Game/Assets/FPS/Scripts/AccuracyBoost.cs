@@ -34,18 +34,29 @@ public class AccuracyBoost : MonoBehaviour
             message.GetComponent<Transform>().SetAsLastSibling();
         }
 
-        var wepMan = player.GetComponent<PlayerWeaponsManager>();
+        var wepMan = player.GetComponent<PlayerWeaponsManager>(); //get the player weapon manager
+
+        WeaponController temp = wepMan.getWeaponSlots()[0]; //the first weapon held
+
+        //modify the first weapon
+        temp.bulletSpreadAngle *= boostAmount; 
+        temp.crosshairDataDefault.crosshairSize = (int)((double)temp.crosshairDataDefault.crosshairSize * boostAmount);
+
+
+
+
+
         if (wepMan)
         {
-            foreach (WeaponController wand in wepMan.getStartingWeapons())
-            {
-                wand.setBulletSpreadAngle(wand.getBulletSpreadAngle() * boostAmount);
-                wand.getCrosshairDataDefault().setCrosshairSize((int)((float)wand.getCrosshairDataDefault().getCrosshairSize() * boostAmount));
-            }
+            //foreach (WeaponController wand in wepMan.getStartingWeapons())
+            //{
+            //    wand.setBulletSpreadAngle(wand.getBulletSpreadAngle() * boostAmount);
+            //wand.getCrosshairDataDefault().setCrosshairSize((int)((float)wand.getCrosshairDataDefault().getCrosshairSize() * boostAmount));
+            //}
+            //wepMan.getStartingWeapons()[0].setBulletSpreadAngle(wepMan.getStartingWeapons()[0].getBulletSpreadAngle() * boostAmount);
         }
 
-        //increase speed by boost amount
-        player.changeSpeed(boostAmount);
+        m_Pickup.PlayPickupFeedback();
         Destroy(gameObject);
     }
 }

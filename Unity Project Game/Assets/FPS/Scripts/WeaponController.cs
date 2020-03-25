@@ -13,16 +13,13 @@ public struct CrosshairData
 {
     [Tooltip("The image that will be used for this weapon's crosshair")]
     public Sprite crosshairSprite;
-    [Tooltip("The size of the crosshair image")]
+    [Tooltip("The size of the crosshair image initially")]
+    public int initCrosshairSize;
+    [Tooltip("The size of the crosshair image in game")]
     public int crosshairSize;
     [Tooltip("The color of the crosshair image")]
     public Color crosshairColor;
 
-    //getters and setters
-    public int getCrosshairSize()
-    {
-        return crosshairSize;
-    }
 
     public void setCrosshairSize(int size)
     {
@@ -57,7 +54,9 @@ public class WeaponController : MonoBehaviour
     public ProjectileBase projectilePrefab;
     [Tooltip("Minimum duration between two shots")]
     public float delayBetweenShots = 0.5f;
-    [Tooltip("Angle for the cone in which the bullets will be shot randomly (0 means no spread at all)")]
+    [Tooltip("Initial angle for the cone in which the bullets will be shot randomly (0 means no spread at all)")]
+    public float initBulletSpreadAngle = 0f;
+    [Tooltip("In-game angle for the cone in which the bullets will be shot randomly (0 means no spread at all)")]
     public float bulletSpreadAngle = 0f;
     [Tooltip("Amount of bullets per shot")]
     public int bulletsPerShot = 1;
@@ -121,54 +120,12 @@ public class WeaponController : MonoBehaviour
 
     const string k_AnimAttackParameter = "Attack";
 
-    //getters and setters
-    public CrosshairData getCrosshairDataDefault()
-    {
-        return crosshairDataDefault;
-    }
-
-    public float getDelayBetweenShots()
-    {
-        return delayBetweenShots;
-    }
-
-    public void setDelayBetweenShots(float delay)
-    {
-        delayBetweenShots = delay;
-    }
-
-    public float getBulletSpreadAngle()
-    {
-        return bulletSpreadAngle;
-    }
-
-    public void setBulletSpreadAngle(float theta)
-    {
-        bulletSpreadAngle = theta;
-    }
-
-    public float getMaxAmmo()
-    {
-        return maxAmmo;
-    }
-
-    public void setMaxAmmo(float max)
-    {
-        maxAmmo = max;
-    }
-
-    public float getAmmoReloadRate()
-    {
-        return ammoReloadRate;
-    }
-
-    public void setAmmoReloadRate(float rate)
-    {
-        ammoReloadRate = rate;
-    }
 
     void Awake()
     {
+        crosshairDataDefault.crosshairSize = crosshairDataDefault.initCrosshairSize;
+        bulletSpreadAngle = initBulletSpreadAngle;
+
         m_CurrentAmmo = maxAmmo;
         m_LastMuzzlePosition = weaponMuzzle.position;
 
@@ -178,6 +135,7 @@ public class WeaponController : MonoBehaviour
 
     void Update()
     {
+
         UpdateAmmo();
 
         UpdateCharge();

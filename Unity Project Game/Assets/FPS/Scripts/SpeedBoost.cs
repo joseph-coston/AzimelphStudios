@@ -36,6 +36,7 @@ public class SpeedBoost : MonoBehaviour
 
         //increase speed by boost amount
         player.changeSpeed(boostAmount);
+        m_Pickup.PlayPickupFeedback();
         Destroy(gameObject);
     }
 }

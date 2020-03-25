@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 8098751476019455220}
   - component: {fileID: 8090847488450120274}
   m_Layer: 0
-  m_Name: Magic_Wand
+  m_Name: Lightning_Bolt_Wand
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -116,19 +116,22 @@ MonoBehaviour:
   weaponIcon: {fileID: 21300000, guid: 3319977335472124b90f559440015e61, type: 3}
   crosshairDataDefault:
     crosshairSprite: {fileID: 21300000, guid: 2962952d6e5ae7342a298d45a3945069, type: 3}
-    crosshairSize: 125
+    initCrosshairSize: 0
+    crosshairSize: 150
     crosshairColor: {r: 1, g: 1, b: 1, a: 0.4}
   crosshairDataTargetInSight:
     crosshairSprite: {fileID: 21300000, guid: e881aa18189b12f4e915fc5b14ddc421, type: 3}
+    initCrosshairSize: 0
     crosshairSize: 40
     crosshairColor: {r: 1, g: 0, b: 0, a: 1}
   weaponRoot: {fileID: 1505447205160222267}
   weaponMuzzle: {fileID: 8334323006752503713}
   shootType: 1
-  projectilePrefab: {fileID: 528546716365072993, guid: 7f6d171c67f0499429e82fc0c60e142f,
+  projectilePrefab: {fileID: 528546716365072993, guid: ab960d3a1659fae4fb5736136be310eb,
     type: 3}
   delayBetweenShots: 0.1
-  bulletSpreadAngle: 8
+  initBulletSpreadAngle: 10
+  bulletSpreadAngle: 10
   bulletsPerShot: 1
   recoilForce: 1
   aimZoomRatio: 0.5
@@ -876,7 +879,7 @@ PrefabInstance:
     - target: {fileID: 8455270613747015080, guid: 21c8bd050f24da54285f8a3987ee6253,
         type: 3}
       propertyPath: moveWithTransform
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21c8bd050f24da54285f8a3987ee6253, type: 3}

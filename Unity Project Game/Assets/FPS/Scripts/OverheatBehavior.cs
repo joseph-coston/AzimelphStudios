@@ -22,6 +22,9 @@ public class OverheatBehavior : MonoBehaviour
     [Tooltip("The emission rate for the effect when fully overheated")]
     public float steamVFXEmissionRateMax = 8f;
 
+    public Light wandLight;
+    float defaultIntensity;
+
     //Set gradient field to HDR
     [GradientUsage(true)] 
     [Tooltip("Overheat color based on ammo ratio")]
@@ -45,6 +48,9 @@ public class OverheatBehavior : MonoBehaviour
 
     void Awake()
     {
+        //get default intensity
+        defaultIntensity = wandLight.intensity;
+
         var emissionModule = steamVFX.emission;
         emissionModule.rateOverTimeMultiplier = 0f;
 
@@ -75,14 +81,15 @@ public class OverheatBehavior : MonoBehaviour
         float currentAmmoRatio = m_Weapon.currentAmmoRatio;
         if (currentAmmoRatio != m_LastAmmoRatio)
         {
-            overheatMaterialPropertyBlock.SetColor("_EmissionColor", overheatGradient.Evaluate(1f - currentAmmoRatio));
+            overheatMaterialPropertyBlock.SetColor("_EmissionColor", overheatGradient.Evaluate(0f - currentAmmoRatio));
 
             foreach (var data in m_OverheatingRenderersData)
             {
                 data.renderer.SetPropertyBlock(overheatMaterialPropertyBlock, data.materialIndex);
             }
 
-            m_SteamVFXEmissionModule.rateOverTimeMultiplier = steamVFXEmissionRateMax * ( currentAmmoRatio);
+            m_SteamVFXEmissionModule.rateOverTimeMultiplier = steamVFXEmissionRateMax * (currentAmmoRatio);
+            wandLight.intensity = 0.25f + (defaultIntensity -0.25f) * (currentAmmoRatio);
         }
 
         // cooling sound
