@@ -24,6 +24,7 @@ public class OverheatBehavior : MonoBehaviour
 
     public Light wandLight;
     float defaultIntensity;
+    public float minimumIntensity;
 
     //Set gradient field to HDR
     [GradientUsage(true)] 
@@ -89,7 +90,7 @@ public class OverheatBehavior : MonoBehaviour
             }
 
             m_SteamVFXEmissionModule.rateOverTimeMultiplier = steamVFXEmissionRateMax * (currentAmmoRatio);
-            wandLight.intensity = 0.25f + (defaultIntensity -0.25f) * (currentAmmoRatio);
+            wandLight.intensity = minimumIntensity + (defaultIntensity -minimumIntensity) * (currentAmmoRatio);
         }
 
         // cooling sound

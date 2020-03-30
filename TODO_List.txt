@@ -16,7 +16,6 @@ Model assets :
 		= Rude Oak
 		= Werewolf
 		= Ghost
-	- Add particle systems to other mushrooms with AoE.
 
 Sound :
 	- Add better ambient noise.
@@ -44,7 +43,5 @@ Functionality :
 	- Better font in GUI.
 
 Bugs :
-	- Particle systems are all default purple.
 	- Lightning bolt wand is janky.
 	- Reticle size does not change with increase in accuracy.
-	- Raise notification text at bottom of screen upon power-up

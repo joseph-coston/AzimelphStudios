@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad90ba0b1477764da373f5ec01a8cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: Blaster
+  weaponName: Magic Bolt Wand
   weaponIcon: {fileID: 21300000, guid: 3319977335472124b90f559440015e61, type: 3}
   crosshairDataDefault:
     crosshairSprite: {fileID: 21300000, guid: 2962952d6e5ae7342a298d45a3945069, type: 3}
@@ -183,6 +183,7 @@ MonoBehaviour:
   steamVFX: {fileID: 1818117475793052272}
   steamVFXEmissionRateMax: 10
   wandLight: {fileID: 7136167355188776251}
+  minimumIntensity: 0.25
   overheatGradient:
     serializedVersion: 2
     key0: {r: 0, g: 2.6398654, b: 0, a: 1}
