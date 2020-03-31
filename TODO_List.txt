@@ -20,6 +20,17 @@ Model assets :
 Sound :
 	- Add better ambient noise.
 	- Add spell casting sound effects.
+	- Bettter footstep sfx.
+	- Sfx for firebolt wand:
+		* charging
+		* held charge
+		* firing
+		* explosion
+	- lightning bolt wnad:
+		* firing
+	- magic bolt wand:
+		* firing
+		* impact
 	- Basically almost all other sound effects need a major overhaul, too.
 
 Functionality :
@@ -27,7 +38,6 @@ Functionality :
 		= glitter bolt
 		= razer bolt
 		= lightning bolt (fix it)
-			* lightning shock effects instead of flame effects
 	- Implement power-up boost scripts:
 		= spells per cast
 		= spell damage
