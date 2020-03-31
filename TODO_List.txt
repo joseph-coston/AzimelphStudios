@@ -24,10 +24,10 @@ Sound :
 
 Functionality :
 	- Implement remaining 4 spell types: 
-		= fire bolt
 		= glitter bolt
 		= razer bolt
 		= lightning bolt (fix it)
+			* lightning shock effects instead of flame effects
 	- Implement power-up boost scripts:
 		= spells per cast
 		= spell damage
