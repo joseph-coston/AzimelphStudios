@@ -71,9 +71,9 @@ MonoBehaviour:
   hittableLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  speed: 50
-  gravityDownAcceleration: 500
-  trajectoryCorrectionDistance: 5
+  speed: 60
+  gravityDownAcceleration: 400
+  trajectoryCorrectionDistance: 10
   inheritWeaponVelocity: 0
   damage: 15
   areaOfDamage: {fileID: 0}
@@ -214,7 +214,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 7
       minScalar: 5
       maxCurve:
         serializedVersion: 2

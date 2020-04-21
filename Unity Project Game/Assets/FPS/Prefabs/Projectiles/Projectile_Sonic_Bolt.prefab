@@ -4827,7 +4827,6 @@ GameObject:
   - component: {fileID: 8924682559891268397}
   - component: {fileID: 1790182271367145459}
   - component: {fileID: 51926565620445879}
-  - component: {fileID: 7516185991547338197}
   m_Layer: 0
   m_Name: Projectile_Sonic_Bolt
   m_TagString: Untagged
@@ -4874,7 +4873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de99b30e1e73fd14e98cc5371da25d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.3
+  radius: 0.5
   root: {fileID: 8402172112652589804}
   tip: {fileID: 1135791333161367127}
   maxLifeTime: 10
@@ -4891,7 +4890,7 @@ MonoBehaviour:
   trajectoryCorrectionDistance: 1000
   inheritWeaponVelocity: 0
   damage: 25
-  areaOfDamage: {fileID: 7516185991547338197}
+  areaOfDamage: {fileID: 0}
   radiusColor: {r: 0, g: 1, b: 1, a: 1}
 --- !u!198 &1790182271367145459
 ParticleSystem:
@@ -9623,62 +9622,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &7516185991547338197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3659995153115176983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  areaOfEffectDistance: 3
-  damageRatioOverDistance:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: -0.00009461492
-      value: 0.9954351
-      inSlope: -0.048522145
-      outSlope: -0.048522145
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.23936667
-    - serializedVersion: 3
-      time: 0.7394209
-      value: 0.95820624
-      inSlope: -0.49857038
-      outSlope: -0.49857038
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.17027973
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.9029845
-      value: 0.54735035
-      inSlope: -4.484388
-      outSlope: -4.484388
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.118061244
-      outWeight: 0.66330165
-    - serializedVersion: 3
-      time: 0.9968262
-      value: 0.000076293945
-      inSlope: -5.098493
-      outSlope: -5.098493
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.022151938
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
 --- !u!1 &5564024855854763701
 GameObject:
   m_ObjectHideFlags: 0
