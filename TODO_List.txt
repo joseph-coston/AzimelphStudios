@@ -36,8 +36,6 @@ Sound :
 Functionality :
 	- Implement remaining 4 spell types: 
 		= glitter bolt
-		= razer bolt
-		= lightning bolt (fix it)
 	- Implement power-up boost scripts:
 		= spells per cast
 		= spell damage
@@ -47,11 +45,11 @@ Functionality :
 		= wand illumination range
 		= others...?
 	- Add power-up point option dialogue menu.
+	- Add wand pickup option dialogue menu.
 	- Implement wand randomization at beginning of game.
 	- Custom/new "game over" screen and menu.
 	- Custom/new "main menu" screen and menu.
 	- Better font in GUI.
 
 Bugs :
-	- Lightning bolt wand is janky.
-	- Reticle size does not change with increase in accuracy.
+	- Reticle size does not change with increase in accuracy. (may not fix)
