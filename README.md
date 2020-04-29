@@ -18,6 +18,7 @@ when close to the player, reducing the life total for each hit. The player can s
 Shooting magic drains mana, represented by a blue bar. This bar will slowly refill when not using the wand. 
 
 
+"Production 2"
 
 Many features have not been implemented. Due to the major changes in the work environment, mainly as 
 an effect of the quarantine, the following features are ether incomplete of missing entirely.
@@ -27,6 +28,7 @@ built on a pre-existing prefabs. Thus not all functionalities are to the expecta
 
 The objective of the game is still unfinished. The four totem like artifacts have not been coded or modeled, 
 so there is no current ends state for the game. 
+
 
 Overall the game is in an unfinished state, due to unforeseen circumstances. Many of the core features and 
 aspects have been fully or partially realized. 
